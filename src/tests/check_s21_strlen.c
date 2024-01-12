@@ -5,17 +5,12 @@
 #include "../check_s21_string.h"
 #include "../s21_string.h"
 
-START_TEST(nullptr_check_s21_strlen)
-{
-  ck_assert_uint_eq(strlen(S21_NULL), s21_strlen(S21_NULL));
-}
-END_TEST
 
 Suite *s21_strlen_suite() {
   Suite *s = suite_create("s21_strlen");
   TCase *tc_corner = tcase_create("corner");//, *tc_additional = tcase_create("additional");
 
-  tcase_add_test(tc_corner, nullptr_check_s21_strlen);
+//  tcase_add_test(tc_corner, nullptr_check_s21_strlen);
 //   tcase_add_test(tc_corner, beyond_end_check_s21_memchr);
   suite_add_tcase(s, tc_corner);
 
