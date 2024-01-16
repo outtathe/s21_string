@@ -2,6 +2,10 @@
 #define CHECK_S21_STRING_H
 
 Suite *s21_memchr_suite();
+Suite *s21_memcmp_suite();
+Suite *s21_memcpy_suite();
 Suite *s21_strlen_suite();
+Suite *s21_strchr_suite();
+Suite *s21_strncmp_suite();
 
 #endif
