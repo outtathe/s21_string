@@ -1,7 +1,3 @@
-#include <check.h>
-#include <string.h>
-#include <stdlib.h>
-
 #include "../check_s21_string.h"
 #include "../s21_string.h"
 
@@ -22,9 +18,9 @@ START_TEST(additional_check_s21_memchr)
   char *test = (char *)malloc(12 * sizeof(char));
   strcpy(test, "test string");
   test = (void *)test;
-  ck_assert_mem_eq(memchr(test, 't', 5), s21_memchr(test, 't', 5), 12);
+  ck_assert_ptr_eq(memchr(test, 't', 5), s21_memchr(test, 't', 5));
   ck_assert_mem_eq(memchr(test+3, 's', 4), s21_memchr(test+3, 's', 4), 6);
-  ck_assert_mem_eq(memchr(test, 'g', 99), s21_memchr(test, 'g', 99), 1);
+  ck_assert_ptr_eq(memchr(test, 'g', 99), s21_memchr(test, 'g', 99));
   free(test);
 }
 END_TEST

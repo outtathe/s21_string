@@ -1,7 +1,3 @@
-#include <check.h>
-#include <string.h>
-#include <stdlib.h>
-
 #include "../check_s21_string.h"
 #include "../s21_string.h"
 
