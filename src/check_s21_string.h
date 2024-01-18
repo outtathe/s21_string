@@ -7,5 +7,6 @@ Suite *s21_memcpy_suite();
 Suite *s21_strlen_suite();
 Suite *s21_strchr_suite();
 Suite *s21_strncmp_suite();
+Suite *s21_strncpy_suite();
 
 #endif
